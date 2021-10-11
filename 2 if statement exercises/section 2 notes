@@ -1,0 +1,56 @@
+Ex_36
+### I learned that you can also use the "or" boolean operator to validate inputs ###
+
+Ex_39
+### I learned from writing this program that I can use the range() function to
+# generate a range of numbers to which I can put in the indices of a list to loop
+# through with. I am sure there is a faster way to do this but this works. NOTE:
+# I have written this in a way that extra elements can be added to both sounds
+# and decibels lists. ####
+
+Ex_42
+### In this I learned that you must take care to initialise values; in this
+# example I forgot to initialise x in order to call it in an un-neseted line
+# (the last "if" statement) ###
+
+Ex_45
+### In this I learned that for the number = int(square[1:]) The ":" is very
+# important so that it includes all characters entered after the letter, so that
+# multiple digit numbers can be processed. ###
+
+Ex_46
+### In this I learned that "or" statements are a bit pedantic e.g.
+# if month == "January" or "February":
+# DOES NOT WORK and for some reason equates an input of month = April as true
+# for this conditional statement. You have to say
+# if month == "January" or month == "February":
+# so have two definite conditions either side of boolean operators, don't let
+# python do the interpreting.
+# I also learned that a lot of if statements can sometimes be less hassle than
+# a more complex looping list system ###
+
+Ex_50
+### I learned that you cannot evaluate sqrt(disc) before you have established
+# whether the disc is -ve, == 0, or +ve as the sqrt of a negative number is
+# cannot be done (without the use if i ofc). I have also learned to be careful
+# with math operation order.
+#   -b+sqrt(disc)/2*a   !=  (-b+sqrt(disc))/2*a
+###
+
+Ex_53
+### I learned that sometimes if there appears to be a syntax error on a line
+# the error may lie on the previous line e.g. a function may be missing a close
+# bracket e.g. function(variable
+# and the next line e.g. else:
+# may be interpreted as included in the unenclosed function call. ###
+
+Ex_58
+### I learned that you can use a = b = c = value to assign multiple variables
+# to the same value. Use of range function. Use of list of lists. ###
+
+Ex_59
+### I learned that string characters actually have an intrinsic numerical value associated
+# with them, most likely the ascii/unicode value assignment. So "A" < "B" < "C" ...< "Z"
+# and that "9" > "8" > "7" ... > "0". I also learned that range(a,b,c) will generate
+# an iterative sequence of numbers starting from a UP TO BUT NOT INCLUDING b
+# (provided b is an integer) in steps of c ###
