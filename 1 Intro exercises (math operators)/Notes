@@ -1,0 +1,42 @@
+Ex_11
+### I learned from this that you should always read over and look for typos first
+# before tearing your hair out over whether the logic is correct ###
+
+Ex_13
+### I learned from this that you should not use so many numbers in your code
+# and instead should set them as variables. I also did not make use of the
+# "%" math operator which gives the remainder, i.e. no need for
+#
+# remain -= loonie * 100
+#
+# You can also perform calculations within a print() statement, e.g.
+# print("", cents // CENTS_PER_TOONIE, "toonies") ###
+
+Ex_15
+### I learnt in this that it is good practice to assign constant variables at the
+# beginning of your program, then take input, then calculate. ###
+
+Ex_17
+### I Learned that you cannot perform calculations in print statement IF there
+# is a "%" marker in the string print statement, i.e CANNOT do
+# print("This would cost approximately %.2f $" % cost_cents/100 )
+#
+# Would instead have to do
+# print("This would cost approximately", cost_cents/100, "$" )
+###
+
+Ex_25
+### I learned from this that %d is used to format decimals (integers), %02d
+# specifies a decimal integer using 2 digits with a leading 0 if necessary ###
+
+Ex_28
+### Can use round function to round floating point numbers to closest integer ###
+
+Ex_32
+### min() and max() are functions and can simply be passed comma separated
+# variables ###
+
+Ex_33
+### I learned the new line marker \n and that you can start a new line of code
+# using the \ character (so code can be split up for easy reading and to fit
+# into page) ###
