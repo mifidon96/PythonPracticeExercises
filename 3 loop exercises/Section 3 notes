@@ -1,0 +1,91 @@
+Ex_61
+### In this i learned the use of the sum(list) function and the
+# list.append(element) function. ###
+
+Ex_63
+### I have learned in this that I tend to make unnecessary lists with nothing
+# in it. Better to create variables as I go along or plan whole thing out. ###
+
+Ex_65
+### Ben Stephenson has the first input outside of the loop and so there is no
+# 'if' statements within the loop. I suppose this makes the loop statement less
+# cluttered. The break input would be the last line in the loop statement.
+# I will try this approach in the next exercise. ###
+
+Ex_66
+### In this exercise I Used the first input outside of the loop and the entry/
+# escape line as the last line in the while loop ###
+
+Ex_68
+### I learned in this exercise that you can use an 'and' boolean operator in
+# a loop condition and that you can use an 'else' statement if the conditions
+# are not met. Useful for checking errors in  a loop ###
+
+Ex_70
+### I tried to figure this out but my code got way too complicated. Ben shows
+# in his answer that a good way to tackle the 'wrapping around' in a list or
+# string to find the new index after a shift is as follows: take the index of
+# the old value, add the shift amount and then % by the length of the list/string.
+# For example if the new shifted index is 3 in a length of 26, then the new
+# index is simply 3. Or, if the old index is 25 and gets shifted up by 4,
+# the shifted index is now 29; again 29 % 26 = 3 (same as counting, wrapping
+# around: 25, 26, 1, 2, 3).
+# If the new shifted index is a negative number it also works. If the original
+# index is 2 and gets shifted by -4 to -2,
+# -2 % 26 = 24
+# This is the same as counting back: 2, 1, 26, 25, 24.
+# The actual formula to work out the modulo divider operator '%' shows that this
+# works. This is the cleanest way to deal with
+# list/string wrap arounds. ###
+
+Ex_71
+### In this exercise I learned about the abs() function to get the absolute
+# value of a number ###
+
+Ex_72
+### In this exercise I learned that the range() function can only take integers
+# as inputs. I also used the string.lower() command. When I found this command
+# on the internet I assumed it was simply a function with the desired string as
+# a parameter however it is not. Be careful not to assume the use of a function.
+# Ben's solution is v similar but instead uses the loop.
+#
+#           for i in range(0, len(line) // 2):
+#               if line[i] != line[len(line) - i - 1]:
+#                   palindrome = False
+#
+# This is much more simple with a good use of the // operator which will return
+# a rounded down INTEGER. Never underestimate the power of your trusty, reliable
+# and computationally undemanding arithmetic operators! (+,-,*,/,//,%)
+###
+
+Ex_73
+### In this exercise I learned something VERY VALUABLE: Instead of taking
+# in a complex piece of data (in this case a string with punctuation, spaces
+# and mixed upper and lowercase letters) and coming up with a complex analysis;
+# change the complex data to a more simple form (in this case, making all
+# letters lowercase and then creating a new string made up of all letter-only
+# characters) to then perform a simpler analysis on. This is more efficient and
+# less confusing to figure out and encode an algorithm to perform the analysis.
+###
+
+Ex_74
+### In this exercise I learned that you can use end = "" as a final parameter
+# to stop the next print() command starting a new line. I also learned that the
+# string formatting command %ny, where n is a number and y is a data type, that
+# n will specify the number of spaces allocated to the formatted string and the
+# string being formatted will fill the allocated spaces aligned to the right.
+# e.g. print("Hello%10d" % x), where x = 1000 will produce:
+# Hello     1000
+# (1000 with 6 spaces behind it then the word Hello).
+# Ben's solution involved defining the range parameters beforehand (good practice)
+# and also simply entering a print() command after the loop rather than my use
+# of an if statement for printing the last line without an end="" parameter. ###
+
+Ex_77
+## I learned in this that the range iterator has the same rules iterating in
+# negative steps as it does iterating in positive steps.
+# range(first number, final number +/- 1, +/-step) ###
+
+Ex_80
+### It works all good, code could be massively tidied up by the use of a function
+# for a coin flip which the next set of 20 exercises is all about! ###
