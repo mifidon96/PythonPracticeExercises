@@ -1,0 +1,67 @@
+Ex_104
+
+### Learned about the method, list.sort(reverse=True|False, key=myFunc)
+# which when parameters left empty will assort by ascending/alphabetical order,
+# based on the value of the number / first letter of the string.
+# When reverse = True the order will be flipped.
+# if myfunct is defined and entered as a parameter for sort(), the method will
+# sort based on this returned parameter: either a string(alphabetical),
+# or an integer (numerical value).
+# The sorted() function works similarly and returns a sorted data type.
+# The main difference is that the list.sort() method modifies the existing list
+# only works for lists, whereas the sorted() method returns a list of the sorted
+# elements and can be used on any data type e.g. lists and dictionaries.
+# list.append(data) will add data as an element to the list, even another list! ###
+
+Ex_105
+
+### Exactly the same as Ex_104 but with sort(reverse=True) ###
+
+Ex_106
+### ben used the list.pop() method to remove outliers. The function removes the
+# element at a specified index and can be assigned to a variable. If no
+# parameter is given it will remove the last element in the list, otherwise it
+# will remove the element at the specified index. ###
+
+Ex_107
+
+### Learnt that you can check list as you go along when adding elements ###
+
+Ex_116
+
+### Discovered a new definition of the meaning of 'immutable'. A string is
+# defined as immutable and a good example of this is that you cannot do, for
+# example: string.lower()
+# but rather you must do: string = string.lower()
+# the data type is hardcoded and the memory of this cannot be changed, you MUST
+# reassign the change made to a variable (either a new name or itself) ###
+
+Ex_117
+### Use of zip(list1, list2) to create a list of tuples, containing the
+# elements from both lists at the same index as a pair. ###
+
+Ex_118
+### Use of list.insert(index, elem) function. Inserts an element at a specified
+# index. does not return anything (lists are mutable) ###
+
+Ex_119
+### The deal() function changed the var deck, that was local to the main()
+# function. Need to learn more about how and why variables get changed (local
+# and global variables etc.) ###
+
+Ex_123
+### I learned that if you want to evaluate if a list is empty, instead of writing
+# if len(list) < 0:
+#   "instruction"
+#
+# you can instead simply write
+#
+# if list:
+#   "instruction"
+###
+
+Ex_127
+### Previous version was much longer than a few seconds. Needed optimizing.
+# Now uses an iterative method to generate multiples of a number and not
+# checking if % n == 0 each time which is a lot heavier in terms of computation.
+###
