@@ -1,0 +1,85 @@
+Ex_128
+### Use of the dictionary.items() function, returns a list of tuples containing
+# the a key and its value. Also first time using a loop for two comma separated
+# variables, e.g.
+#
+# for key, value in dict.items():
+#
+# This works for comma separated assignments e.g. on a command line or in a
+# tuple! ###
+
+Ex_129
+### Program works but is a bit clunky and has terrible formatting for output
+# of table. In Ben's solution he simply initializes a dictionary for the expected
+# percentage frequency and for the recorded frequency, does calculation in the
+# string formatting and formats it to fit. Formatting is very similar to mine
+# in terms of aligning first two header lines. He has simply counted the spaces
+# and where to insert text:
+#
+# print("%5d %11.2f   %8.2f" % (something))
+#
+# The numbers before the decimal place specifications are the total number of
+# character spaces the string will occupy, with the string filling in from a
+# right alignment. I have commented out my attempt and will try to implement
+# Ben's method in the final code.
+# I guess that what I have learned from this is that sometimes it is better to
+# just fill in an initial variable rather than 'automating' it with a loop as it
+# may just take less code to do so. Also that I should try to experiment with
+# function scope, setting global variables to ALL CAPS. ###
+
+Ex_134.py
+### Used a set, this is basically an unordered collection of elements, each
+# element is unique and immutable, however the set itself is mutable (can add or
+# remove items). A set in python is basically a list but using curly
+# brackets, {}. Creating an empty set is less straight forward as a pair of
+# empty curly brackets is an empty dictionary so must turn the empty dictionary
+# into a set using,
+# a = {}
+# a = set() ###
+
+Ex_136
+### Modified code from Ex_135 ###
+
+Ex_138
+### In this exercise I have learned that dictionary keys act a bit like a custom
+# named index. So to get a value from a dictionary you must call:
+# dictionary[key]
+# and if the value is a list for example, you can get a certain value like so:
+# dictionary[key][list_index]
+# However if you are looping through a dictionary e.g.
+# for i in dict:
+# it will return the key NOT the value! This is what makes it a little different
+# from a list. In order to loop through values, you would instead have to write:
+# for x in dictionary:
+#   dictionary[x]
+###
+
+Ex_139
+### The program works but I have made a big mistake. I have coded this assuming
+# dictionaries are ordered, e.g.
+#
+# for letter in card:
+#   card[letter][index]
+#
+# assuming I will get the keys "B", "I", "N", "G" and "O" in order.
+# Lucky for me this version of python was updated with dictionaries now being
+# ordered however this may not be the case in the future. Typically they are NOT
+# an ordered data structure.
+# The same thing could easily be achieved by doing
+#
+# for letter in "BINGO":
+#   card[letter]
+#
+# But it would be tedious to go through it all exercises and change it. I will
+# try not to make this mistake in future exercises ###
+
+Ex_140.py
+### Only issue I came across during this program was that when I performed
+# shuffled_calls.pop(0) for some reason it also performed calls.pop(0),
+# even ater doing a shuffled_calls = calls assignment.
+# Turns out when you want to make a copy of a list you should do
+# List_B = list(List_A)
+# I do not understand fully what the reason is but it has something to do with
+# pointers getting mixed up, thereby both lists although assigned to separate
+# variables end up doing the same action.
+# Just make sure to look out for this in future when making a copy of a list. ###
