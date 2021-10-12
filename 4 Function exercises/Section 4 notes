@@ -1,0 +1,33 @@
+Ex_84
+### In this exercise I learnt the use of the '^' XOR operator ###
+
+Ex_89
+### I learned a lot in this exercise. Use of the string.replace(x,y) functions
+# which replaces all instances of x in the string with y. I also learned a
+# valuable lesson in the order of operations, where I first used the
+# string.replace() function but would then overwrite this in a later operation.
+###
+
+Ex_90
+### In this exercise I learned about the string.strip(), .lstrip(), and .rstrip()
+# functions which strip all leading and tailing, leading and tailing characters
+# resp. (e.g string.strip("xyz")). A blank parameter will strip whitespace.
+# I also learned how to stop a the main() function running automatically when
+# this file is imported.
+# The __name__ variable is automatically assigned a value by Python when the
+# program starts running. It contains "__main__" when the file is executed
+# DIRECTLY by Python. It contains the name of the module when the file is imported
+# into another program. ###
+
+Ex_97
+### I have learned a very valuable lesson! If you call a function and assign the
+# returned result as a variable, NEVER CALL THE VARIABLE THE SAME NAME AS THE
+# FUNCTION! Had this issue for the line randPass = randPass(), where the function
+# returns a string and then the computer reads randPass() NOT as a function, but
+# as a string with () next to it, which generates the 'not callable' error,
+# which makes sense as the line: "string"() is wrong. ###
+
+Ex_98
+### My solution here is far longer than the one expected by Ben (~ 41 lines),
+# however my solution is more general and can be used as a basis for the next
+# exercise which converts arbitrary bases. ###
