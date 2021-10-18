@@ -1,0 +1,200 @@
+Ex_141
+### I have written some separate notes on the basics of reading and writing to
+# text and CSV files. I am putting what I have learned into practice. Since the
+# last exercise I have also learned the fstring formatting technique for strings
+# and so I will be switching over to that from now on. This is also the first
+# time I have used the try:, except Error: technique for error detection and
+# custom error messages. ####
+
+Ex_142
+### So my solution here works, ran into one major problem where if you run the
+# readline() function more times than there are lines in the file, it will
+# return "". Technically you do have to read through all the lines in the file
+# but you only have to read the file once and entries are deleted as it
+# progresses so you only need to store a max of 11 lines at any one time.
+# This is not exactly what Ben said but it's close. Let's see his solution:
+# Okay! So he used the exact same logical method as me but with slightly different
+# code.
+# It seems for the this exercise and the previous I misunderstood the
+# brief that the filename needs to be a COMMAND LINE parameter; that is, the
+# file name needs to be on the same line as the command to actually run the file.
+# It uses a method including the following lines:
+#
+# import sys
+# if len(sys.argv) != 2:  # Guessing this ensures 2 cmd line entries
+# f = open(sys.argv[1], "r")  # this could instead be...
+# with open(sys.argv[1]) as f:
+#
+#
+# Loop used for Ben's answer was instead (more concise):
+#
+# lines = []
+# for line in f:   # Python interprets element in file(iterable) as a line I guess?
+#     lines.append(line)
+#     if len(lines) > 10:
+#         lines.pop(0)
+###
+
+Ex_143
+### This program worked really well with not problems, using the filenames in
+# the command line this time and the first time using the f string formatting
+# thechnique. Works really well and Atom makes it really easy to read! ###
+
+Ex_145
+### Learnt a very valuable lesson that you should never try and iterate trough
+# a list and attempt to remove words as you go as this will change the indices
+# of the elements. For example if you are iterating over a list and criteria is
+# met to delete the element at list(0), then list(0) will be deleted and the
+# next element along will now be list(0). The computer does not account for this
+# and will naturally go to the next index after 0 which is 1, but list(1) is now
+# what was list(2) IN THE ORIGINAL LIST.
+# Instead what you should do is create a new empty list and simply append it
+# with elements in the original list that do not meet criteria for being deleted
+# and then use this new list as your altered list. (THIS METHOD IS COMMENTED OUT)
+# I have also devised another method which is in use in this code, whereby
+# you change each element that fulfils deletion criteria to a constant
+# (preferably a different data type e.g. an integer in a list of strings)
+# and then use the list.remove(constant) method to delete these until all
+# instances of the constant (constant not in list) are gone. This saves you
+# having to make another list, which can be an issue if the list is extremely
+# long. ###
+
+Ex_148
+## This solution was too long and complicated. This was also my first exercise
+# after a 4 day break so I was a little rusty. The purpose of the exercise was
+# to actually use the 'try:' and 'except:' functions in the solution. Ben's
+# answer was as follows.
+#
+# total = 0
+# line = input("Enter a number")
+#
+# while line != "":
+#     try:
+#         num = float(line)
+#         total += num
+#         print("Running total:", total)
+#     except ValueError:
+#         print("Invalid number.")
+#     line = input("Enter a number")
+#
+# print("Total:", total)
+
+Ex_150.py
+### When writing lines to a file always include the new line marker in the body
+# of the line and at the end, otherwise it will write a new line marker to the
+# beginning of the next line, and if the line is blank then it will indent an
+# extra line. Can also use the string.find("substring") method to find the index
+# of the first letter of the argument. ###
+
+Ex_151.py
+### f.readline() acts an iterable, if called twice it will pick off from where
+# it left off and so to go back to beginning of file, command f.seek(0,0) is
+# needed. Had a huge amount of difficulty with this task. Could of done a
+# similar solution to Ben and create a list of word read from file but that is
+# not memory efficient at all. This method only stores two words at any one time.
+# Above notes basically cover the rules for the aspects I struggled with most.
+# The f.seek(x,y) function sets and returns the read/write pointer at the
+# CHARACTER position (includes hidden \n single character) in the file (arg x),
+# arg y will determine where the pointer will seek from: 0 (default) for
+# beginning of the file, 1 from current position and 2 from file's end.
+# HOWEVER, only arg y = 0 (default) is supported for text files using python.
+# f.tell() will return the current position of the pointer.
+#
+# file.txt:
+# Fish apple orange
+# lemon gherkin pie Orange
+#
+# Program script:
+# with open("test.txt") as f:
+#     f.seek(2)
+#     x = f.readline()
+#     print(x)
+#
+# Will print:
+# sh apple orange
+#
+###
+
+Ex_153
+### Learnt that you can stack up .functions()
+# (see line = line.upper().rstrip())
+# Ben meant he wanted a percentage quoted for each letter! Woops. ###
+
+Ex_154
+### This is my first program I have written in a while (had a day job).
+# Using the os module allowed me to switch the
+# working directory so I didn't have to have all of the baby name files in the
+# main program directory. Also by putting an 'r' directly in front of the string
+# it will ignore all instances of "\" as an escape character, allowing the use
+# of the backslash in quoting a file path. I didn't realize the files were
+# written in freq order, I assumed it would be alphabetical so there is some
+# unnecessary ordering, however this does make a good general program. Plus I
+# have added the feature of being able to specify a year range to look at! ###
+
+Ex_155
+### Was an easy task but the line
+# 1900 > int(YEAR) > 2012:
+# was not being evaluated for some reason, maybe python doesn't like calling the
+# int() function in the middle of a double math evaluation? Doesn't really make
+# any sense. Update: NOPE, have tested this and it works elsewhere, really no
+# clue why this isn't working but seems to be a weird fluke?? ###
+
+Ex_156
+### Have already done this in Ex_154. Most popular names in a time period ###
+
+Ex_158
+### This program appears to work correctly however I am finding it hard to get
+# large text documents to try this out. It appears to be a unicode (UTF-8)
+# decode error with at least one issue being the decoding of the ” character
+# (notice that this is different to ""). There also appear to be other issues for
+# example certain words with foreign characters (e.g. umlauts) appear to be
+# displayed out in the command terminal as a string of other characters. This
+# is probably string encoding stuff that I don't know about. I will come back
+# to this later as it is out of the scope of the exercise. ###
+
+Ex_160
+### this was a bit of a monster task to complete, I managed to complete the extra
+# challenge of making the redaction case-insensitive. The two major issues
+# that I came across was one: about lists and their use as a data structure.
+# Unlike an normal variable, to say...
+#
+# new_list = old_list
+#
+# does NOT make a copy of that list, as what a list really is, is a collection
+# of pointers to locations in memory. Running...
+#
+# print(id(new_list))
+# print(id(old_list))
+#
+# will have the SAME MEMORY ADDRESS
+# instead you have to do:
+#
+# new_list = old_list.copy()
+#
+# The other major thing I learned that when reading lines in a text file it does
+# not treat the lines as iterables where you can loop a loop and the nested loop
+# will start from the beginning again. The pointer in the text file REMAINS
+# where it was last pointing to. So either have to open the file each time you
+# need it or simply send pointer back to end (I am opening file each time which
+# is almost definitely not as efficient as resetting the pointer but It would be
+# tedious to change it and I have already spent a lot of time on this exercise).
+# Ben's solution is very simple and much more elegant BUT DOES NOT account for
+# case insensitivity. He essentially stores all the sensitive words in a list
+# then loops through the list and uses...
+#
+# for sens_word in sens_words:
+#   line = line.replace(sens_word, "*" * len(word))
+###
+
+Ex_161
+### Have done it but made it more general for the comment to be the first
+# non-blank line before the function. ###
+
+Ex_162
+### This exercise took ages for me to get my head around this problem.
+# The formatting is not perfect as there are two new lines between paragraphs
+# but I can't think of a way to fix this without changing the whole program which
+# I have done too many times already. One big issue for me which I overlooked
+# AGAIN was the position of the file pointer and how you need to reset it when
+# reading the file again. I didn't actually need to do this for the final
+# program. ###
