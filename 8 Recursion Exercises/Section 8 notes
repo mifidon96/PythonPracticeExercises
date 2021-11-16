@@ -1,0 +1,54 @@
+Ex_164.py
+### So this was my first recursion challenge and I didn't really know how to
+# think about it (recursion is famously hard to get your head around). Essentially
+# you set up an 'active section of code', that will carry out the operation you
+# want your function to apply, followed by a return command INCLUDING the
+# function call (recursive call).
+#
+# This sets up a chain of operations that will not terminate until a
+# 'get out clause' is executed. You can think about it as visualising the
+# function call with the code of the function contained in it.
+# the '[]' and '{}' is for visual aid only and do not refer to a list or
+# dictionary
+#
+# e.g. return n + [adder()]   can be seen as...
+#      return n + [n + {adder()}]     which can in turn be seen as
+#      return n + [n + {n + adder()}]     This goes on and on
+#
+# Literally 'adder()' == 'return n + adder()'
+#
+# NOTICE that 'n + adder' is the last thing on the chains above. That means that
+# all we need to do is give another return command that will terminate this chain
+#
+# e.g. return n + 0.0
+#
+# This will make the chain look like...
+# return n + n + n + 0.0
+#
+# with each n being specified on each function call e.g.
+# return 1.0 + 2.0 + 3.0 + 0.0
+#
+# this will simply return 6.0 and so job done! ###
+
+Ex_165
+### In this exercise euclid's algorithm was provided but you had to write it
+# with a recursive call ###
+
+Ex_167
+### In this exercise I learned how to set default values passed to a function
+# def funct(var1, var2=default_value): ###
+
+Ex_169
+### The algorithm was provided in the question and I am having a hard time
+# figuring out how it determines the edit difference as it has three recursive
+# calls per function which is a lot of branches on the tree ###
+
+Ex_170
+## I tried to tackle this problem for quite a long time and then left it alone
+to come back to it later. I am now learning about classes and objects and the
+instance variables of objects meant that each object could hold its own unique
+variable which was key to solving this. In the question it gives examples of
+what can and can't be made as test cases but claims that $1.25 cannot be made
+form 7 coins, but it in fact can: 4 quarters (4 * $0.25), 2 dimes (2 * $0.10)
+# and a nickel ($0.05). I know this because my program found it which I then
+# checked myself! :) ###
